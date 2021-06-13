@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import json
 from collections import defaultdict
+import faulthandler; faulthandler.enable()
 import sys
 sys.setrecursionlimit(10**6)
 
