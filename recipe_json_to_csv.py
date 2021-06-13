@@ -30,7 +30,7 @@ def get_all_reqs(item, item_reqs_dict, all_items):
     return _get_all_reqs(item, item_reqs_dict, accum_vector)
 
 
-with open("recipe.json") as inh:
+with open("recipe2.json") as inh:
     d = json.load(inh)
     final_d = {}
 
