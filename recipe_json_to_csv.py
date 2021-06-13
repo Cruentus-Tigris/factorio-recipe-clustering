@@ -3,7 +3,7 @@ import numpy as np
 import json
 from collections import defaultdict
 import sys
-sys.setrecursionlimit(5000)
+sys.setrecursionlimit(10000)
 
 # helper function to accumulate the vector of required ingredients
 # use pd.Series() to add the vectors
