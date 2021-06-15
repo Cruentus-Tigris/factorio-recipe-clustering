@@ -30,7 +30,7 @@ def get_all_reqs(item, item_reqs_dict, all_items):
     return _get_all_reqs(item, item_reqs_dict, accum_vector)
 
 
-with open("recipe2.json") as inh:
+with open("recipe.json") as inh:
     d = json.load(inh)
     final_d = {}
 
@@ -48,9 +48,9 @@ with open("recipe2.json") as inh:
         for item in ingreds:
             item_reqs_dict[k][item["name"]] = item["amount"]
 
-    all_reqs = dict()
-    for k in d.keys():
-        all_reqs[k] = get_all_reqs(k, item_reqs_dict, all_items)
-    df = pd.DataFrame(all_reqs).transpose()
+    # all_reqs = dict()
+    # for k in d.keys():
+    #    all_reqs[k] = get_all_reqs(k, item_reqs_dict, all_items)
+    # df = pd.DataFrame(all_reqs).transpose()
 
     df.to_csv("recipe.csv")
